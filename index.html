@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Sales Dashboard</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo-container">
+      <div class="logo"></div>
+      <div>Logo</div>
+    </div>
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Search">
+    </div>
+    <div class="user-container">
+      <div class="user-icon"></div>
+      <div>User</div>
+      <div class="notification-icon" style="margin-left: 20px;">🔔</div>
+    </div>
+  </div>
+  
+  <!-- Revenue Section -->
+  <div class="revenue-section">
+    <div class="revenue-info">
+      <div class="revenue-header">
+        <h3>Revenue amount</h3>
+        <div class="time-period">Last 30 days</div>
+      </div>
+      <div class="revenue-amount">$1,342,567</div>
+      <div class="revenue-metrics">
+        <div class="daily-profit">
+          <div class="profit-label">Today's profit</div>
+          <div class="profit-amount">$24,892</div>
+          <div class="profit-change positive">+12.4% from yesterday</div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="controls">
+      <button class="control-btn">
+        <span><i class="fa-solid fa-calendar-days"></i></span>
+        <span>Monthly</span>
+        <span>▼</span>
+      </button>
+      <button class="control-btn">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <span>Filtre</span>
+      </button>
+      <button class="control-btn">
+        <div class="add-widget">
+          <span><i class="fa-solid fa-plus"></i></span>
+          <span>add Widget</span>
+        </div>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Chart -->
+  <div class="chart-container">
+    <div class="chart-background"></div>
+    <div class="bar-group" id="barGroup">
+      <!-- Bars will be added dynamically -->
+    </div>
+  </div>
+  
+  <!-- KPI Card -->
+  <div class="kpi-card">
+    <div class="kpi-header">Sales KPI</div>
+    <div class="kpi-item">
+      <div class="kpi-label">Average contract</div>
+      <div class="kpi-value">$5,890.68</div>
+    </div>
+    <hr>
+    <div class="kpi-item">
+      <div class="kpi-label">Average deal</div>
+      <div class="kpi-value">$3,720.41</div>
+    </div>
+    <div class="kpi-user">
+      <div class="kpi-user-icon"></div>
+      <div>user</div>
+    </div>
+  </div>
+  
+  <!-- Data Report -->
+  <div class="data-report">
+    <div class="data-report-header">
+      <div class="data-report-title">Data Report</div>
+      <div class="tabs">
+        <div class="tab active">Dashboard</div>
+        <div class="tab">Documents</div>
+        <div class="tab">Reports</div>
+        <div class="tab">History</div>
+        <div class="tab">Setting</div>
+      </div>
+      <div class="controls2">
+        <button class="control-btn2">
+          <span><i class="fa-solid fa-calendar-days"></i></span>
+          <span>Monthly</span>
+          <span>▼</span>
+        </button>
+        <button class="control-btn2">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <span>Filtre</span>
+        </button>
+      </div>
+    </div>
+    
+    <div class="stats-container">
+      <div class="stats-box">
+        <div class="stats-title">Sales statistics</div>
+        <div class="stats-icons">
+          <div class="stats-icon-container">
+            <div class="stats-icon orange">
+              <span>$</span>
+            </div>
+            <div class="icon-label">Total profits</div>
+            <div class="icon-value">$487,932</div>
+          </div>
+          <div class="stats-icon-container">
+            <div class="stats-icon yellow">
+              <span>$</span>
+            </div>
+            <div class="icon-label">Sales revenue</div>
+            <div class="icon-value">$892,145</div>
+          </div>
+          <div class="stats-icon-container">
+            <div class="stats-icon green">
+              <span>$</span>
+            </div>
+            <div class="icon-label">Average bill</div>
+            <div class="icon-value">$3,427</div>
+          </div>
+        </div>
+        
+        <!-- New statistics data -->
+        <div class="stats-data">
+          <div class="stat-item">
+            <div class="stat-label">Daily Sales</div>
+            <div class="stat-value">$12,845</div>
+            <div class="stat-trend trend-up">+8.5% ↑</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Conversion Rate</div>
+            <div class="stat-value">24.8%</div>
+            <div class="stat-trend trend-up">+2.3% ↑</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">Active Users</div>
+            <div class="stat-value">1,284</div>
+            <div class="stat-trend trend-down">-3.1% ↓</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-label">New Customers</div>
+            <div class="stat-value">385</div>
+            <div class="stat-trend trend-up">+12.7% ↑</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-box">
+        <div class="stats-title">Visit statistics</div>
+        <div class="visit-summary">
+          <div class="visit-total">
+            <div class="visit-number">24,892</div>
+            <div class="visit-label">Total Visitors</div>
+          </div>
+          <div class="visit-change">
+            <div class="visit-percent">+18.2%</div>
+            <div class="visit-period">vs last month</div>
+          </div>
+        </div>
+        
+        <div class="visit-chart-container">
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color desktop"></span>
+              <span class="legend-text">Desktop</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color mobile"></span>
+              <span class="legend-text">Mobile</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color tablet"></span>
+              <span class="legend-text">Tablet</span>
+            </div>
+          </div>
+          
+          <div class="visit-chart">
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 65%"></div>
+                <div class="chart-bar mobile" style="height: 85%"></div>
+                <div class="chart-bar tablet" style="height: 35%"></div>
+              </div>
+              <div class="chart-label">Mon</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 75%"></div>
+                <div class="chart-bar mobile" style="height: 65%"></div>
+                <div class="chart-bar tablet" style="height: 45%"></div>
+              </div>
+              <div class="chart-label">Tue</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 85%"></div>
+                <div class="chart-bar mobile" style="height: 75%"></div>
+                <div class="chart-bar tablet" style="height: 55%"></div>
+              </div>
+              <div class="chart-label">Wed</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 90%"></div>
+                <div class="chart-bar mobile" style="height: 80%"></div>
+                <div class="chart-bar tablet" style="height: 40%"></div>
+              </div>
+              <div class="chart-label">Thu</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 70%"></div>
+                <div class="chart-bar mobile" style="height: 90%"></div>
+                <div class="chart-bar tablet" style="height: 30%"></div>
+              </div>
+              <div class="chart-label">Fri</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 50%"></div>
+                <div class="chart-bar mobile" style="height: 60%"></div>
+                <div class="chart-bar tablet" style="height: 25%"></div>
+              </div>
+              <div class="chart-label">Sat</div>
+            </div>
+            <div class="chart-column">
+              <div class="chart-bar-group">
+                <div class="chart-bar desktop" style="height: 40%"></div>
+                <div class="chart-bar mobile" style="height: 50%"></div>
+                <div class="chart-bar tablet" style="height: 20%"></div>
+              </div>
+              <div class="chart-label">Sun</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="visit-metrics">
+          <div class="metric-item">
+            <div class="metric-icon bounce"></div>
+            <div class="metric-info">
+              <div class="metric-value">42.3%</div>
+              <div class="metric-label">Bounce Rate</div>
+            </div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-icon duration"></div>
+            <div class="metric-info">
+              <div class="metric-value">3:24</div>
+              <div class="metric-label">Avg. Duration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-icon"></div>
+          <div class="footer-logo-text">Analytics</div>
+        </div>
+        <p class="footer-description">
+          Your trusted partner in data analytics and business intelligence. 
+          We help businesses make data-driven decisions with our advanced analytics platform.
+        </p>
+        <div class="footer-social">
+          <div class="social-icon">f</div>
+          <div class="social-icon">t</div>
+          <div class="social-icon">in</div>
+          <div class="social-icon">g</div>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-links">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <div class="footer-links">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Analytics Platform. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
+   
+  </script>
+</body>
+</html>
