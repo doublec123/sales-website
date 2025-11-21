@@ -9,8 +9,7 @@ A modern, responsive, and visually appealing sales website built with HTML, CSS,
 ## Table of Contents
 
 - [Features](#features)  
-- [Technologies](#technologies)  
-- [Screenshots](#screenshots)  
+- [Technologies](#technologies)    
 - [Getting Started](#getting-started)  
 - [How to Use](#how-to-use)  
 - [Customization](#customization)  
@@ -37,15 +36,6 @@ A modern, responsive, and visually appealing sales website built with HTML, CSS,
 - CSS3 (Flexbox, Grid)  
 - JavaScript (ES6+)  
 - Responsive design principles  
-
----
-
-## Screenshots
-
-<!-- You can replace these with your own screenshots -->
-![Home Page Screenshot](./screenshot-home.png)  
-![Services Section](./screenshot-services.png)  
-![Footer Section](./screenshot-footer.png)
 
 ---
 
